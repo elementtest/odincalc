@@ -135,6 +135,11 @@ function clearDisplay(e) {
 	e.preventDefault();
 	calculatorviewport.innerHTML = "0";
 	x = "0";
+	y = "0";
+	counterr = 0;
+	console.log('x is now ' + x);
+	console.log('y is now ' + y);
+	console.log('counterr is now ' + counterr);
 
 }
 
