@@ -142,14 +142,29 @@ function clearDisplay(e) {
 	console.log('counterr is now ' + counterr);
 
 }
-
+dowhat = 0
 function addNumbers(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	counterr += 1;
 	console.log('ccounter is');
 	console.log(counterr);
+	console.log('converting x to string');
+	console.log('the type of x beforehand is')
+	console.log(typeof x);
+	var Xx = parseInt(x);
+	console.log(x);
+	console.log('the type of the new Xx is');
+	console.log(typeof Xx);
+	var Yy = parseInt(y);
+	console.log(typeof Yy);
+	} else {
+		console.log('counter will not be increased anymore');
 	}
+}
+
+const myOperateFunct = function(dowhat) {
+	calculatorviewport.innerHTML = dowhat;
 }
 console.log(equals);
 
