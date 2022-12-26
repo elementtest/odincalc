@@ -15,8 +15,8 @@ seven = document.querySelector(".flexbox-item-7");
 eight = document.querySelector(".flexbox-item-8");
 nine = document.querySelector(".flexbox-item-9");
 zero = document.querySelector(".flexbox-item-zero");
-x = "0";
-y = "0";
+let x = "0";
+let y = "0";
 // Create functions for each button saving their value i.e. one = 1 and saving them as x and also displaying them in the calculator display 
 var counterr = 0;
 function OneBtn(e) {
@@ -29,6 +29,7 @@ function OneBtn(e) {
 	calculatorviewport.innerHTML = x;	
 	} else  {
 		y += one.innerHTML;
+		y -= "";
 		console.log("y value is now" + y);
 	};
 };
@@ -40,6 +41,7 @@ function TwoBtn(e) {
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += two.innerHTML;
+		y -= "";
 		console.log('y is now' + y);
 	}
 }
@@ -51,6 +53,7 @@ function ThreeBtn(e) {
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += three.innerHTML;
+		y -= "";
 		console.log('y is now' + y);
 	}
 }
@@ -62,6 +65,7 @@ function FourBtn(e) {
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += four.innerHTML;
+		y -= "";
 		console.log('y is now' + y);
 	}
 }
@@ -73,6 +77,7 @@ function FiveBtn(e) {
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += five.innerHTML;
+		y -= "";
 		console.log('y is now' + y);
 	}
 }
@@ -80,9 +85,11 @@ function SixBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += six.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += six.innerHTML;
+		y -= "";
 		console.log('y is now' + y);
 	}
 }
@@ -90,9 +97,11 @@ function SevenBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += seven.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += seven.innerHTML;
+		y -= "";
 		console.log('y is now' + y);
 	}
 }
@@ -100,9 +109,12 @@ function EightBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += eight.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += eight.innerHTML;
+		y -= ""
+		calculatorviewport.innerHTML = y;
 		console.log('y is now' + y);
 	}
 }
@@ -110,9 +122,12 @@ function NineBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += nine.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += nine.innerHTML;
+		y -= "";
+		calculatorviewport.innerHTML = y;
 		console.log('y is now' + y);
 	}
 }
@@ -120,9 +135,12 @@ function ZeroBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += zero.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 	} else {
 		y += zero.innerHTML;
+		y -= "";
+		calculatorviewport.innerHTML = y;
 		console.log('y is now' + y);
 	}
 }
@@ -130,7 +148,6 @@ function ZeroBtn(e) {
 
 
 // clear display Clears the display by resetting it back to 0  note that x is a string
-
 function clearDisplay(e) {
 	e.preventDefault();
 	calculatorviewport.innerHTML = "0";
@@ -142,32 +159,27 @@ function clearDisplay(e) {
 	console.log('counterr is now ' + counterr);
 
 }
-dowhat = 0
 function addNumbers(e) {
 	if (counterr < 1) {
-	e.preventDefault();
-	counterr += 1;
-	console.log('ccounter is');
-	console.log(counterr);
-	console.log('converting x to string');
-	console.log('the type of x beforehand is')
-	console.log(typeof x);
-	var Xx = parseInt(x);
-	console.log(x);
-	console.log('the type of the new Xx is');
-	console.log(typeof Xx);
-	var Yy = parseInt(y);
-	console.log(typeof Yy);
+		e.preventDefault();
+		counterr += 1;
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now ' + y);
+		console.log(typeof y);
 	} else {
-		console.log('counter will not be increased anymore');
+		e.preventDefault();
+		console.log(typeof x);
+		console.log(typeof y);
 	}
 }
 
-const myOperateFunct = function(dowhat) {
-	calculatorviewport.innerHTML = dowhat;
-}
+
 console.log(equals);
 
+const addFunct = function() {
+	return Xx + Yy;
+}
 // onclick event listeners for each div element defined above
 // each onclick listener links to a function above changing the display
 
