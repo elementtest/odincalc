@@ -1,4 +1,4 @@
-//turn buttons into variables
+// Use DOM querySelector to make variables from the individual classes for each button in the HTML
 calculatorviewport = document.querySelector(".calculatorviewport");
 clear = document.querySelector(".flexbox-item-clear");
 one = document.querySelector(".flexbox-item-1");
@@ -12,6 +12,8 @@ eight = document.querySelector(".flexbox-item-8");
 nine = document.querySelector(".flexbox-item-9");
 zero = document.querySelector(".flexbox-item-zero");
 x = "0";
+
+// Create functions for each button saving their value i.e. one = 1 and saving them as x and also displaying them in the calculator display 
 function OneBtn(e) {
 	e.preventDefault();
 	x += one.innerHTML;
@@ -65,7 +67,7 @@ function ZeroBtn(e) {
 
 
 
-
+// clear display Clears the display by resetting it back to 0  note that x is a string
 
 function clearDisplay(e) {
 	e.preventDefault();
@@ -73,6 +75,7 @@ function clearDisplay(e) {
 	x = "0";
 
 }
+
 
 one.onclick = OneBtn;
 two.onclick = TwoBtn;
