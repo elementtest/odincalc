@@ -1,6 +1,7 @@
 // Use DOM querySelector to make variables from the individual classes for each button in the HTML
 calculatorviewport = document.querySelector(".calculatorviewport");
 clear = document.querySelector(".flexbox-item-clear");
+equals = document.querySelector(".flexbox-item-equals");
 one = document.querySelector(".flexbox-item-1");
 two = document.querySelector(".flexbox-item-2");
 three = document.querySelector(".flexbox-item-3");
@@ -17,26 +18,31 @@ x = "0";
 function OneBtn(e) {
 	e.preventDefault();
 	x += one.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 }
 function TwoBtn(e) {
 	e.preventDefault();
 	x += two.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 }
 function ThreeBtn(e) {
 	e.preventDefault();
 	x += three.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 }
 function FourBtn(e) {
 	e.preventDefault();
 	x += four.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 }
 function FiveBtn(e) {
 	e.preventDefault();
 	x += five.innerHTML;
+	x -= "";
 	calculatorviewport.innerHTML = x;	
 }
 function SixBtn(e) {
@@ -76,6 +82,10 @@ function clearDisplay(e) {
 
 }
 
+console.log(equals);
+
+// onclick event listeners for each div element defined above
+// each onclick listener links to a function above changing the display
 
 one.onclick = OneBtn;
 two.onclick = TwoBtn;
