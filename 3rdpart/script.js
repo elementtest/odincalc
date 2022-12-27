@@ -202,6 +202,9 @@ function UltimateFunction() {
 	} else if (choice === 'changetoSub') {
 		let outcome = x -y;
 		calculatorviewport.innerHTML = outcome;
+	} else if (choice === 'changetoMult') {
+		let outcome = x * y;
+		calculatorviewport.innerHTML = outcome;
 	}
 }
 
@@ -220,6 +223,7 @@ eight.onclick = EightBtn;
 nine.onclick = NineBtn;
 zero.onclick = ZeroBtn;
 addition.onclick = addNumbers;
+subtraction.onclick = subNumbers;
 console.log(x);
 
 clear.onclick = clearDisplay;
