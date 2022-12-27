@@ -5,6 +5,7 @@ equals = document.querySelector(".equals");
 
 addition = document.querySelector(".addition");
 subtraction = document.querySelector('.subtraction');
+multiplication = document.querySelector('.multiplication');
 
 one = document.querySelector(".flexbox-item-1");
 two = document.querySelector(".flexbox-item-2");
@@ -192,6 +193,22 @@ function subNumbers(e) {
 	}
 }
 
+function multNumbers(e) {
+	if (counterr < 1) {
+		choice = "changetoMult";
+		e.preventDefault();
+		counterr += 1;
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now ' + y);
+		console.log(typeof y);
+	} else {
+		e.preventDefault();
+		console.log(typeof x);
+		console.log(typeof y);
+	}
+}
+
 equals.addEventListener('click', UltimateFunction);
 
 function UltimateFunction() {
@@ -204,6 +221,9 @@ function UltimateFunction() {
 		calculatorviewport.innerHTML = outcome;
 	} else if (choice === 'changetoMult') {
 		let outcome = x * y;
+		calculatorviewport.innerHTML = outcome;
+	} else if (choice === 'changetoDiv') {
+		let outcome = x / y;
 		calculatorviewport.innerHTML = outcome;
 	}
 }
@@ -224,6 +244,7 @@ nine.onclick = NineBtn;
 zero.onclick = ZeroBtn;
 addition.onclick = addNumbers;
 subtraction.onclick = subNumbers;
+multiplication.onclick = multNumbers;
 console.log(x);
 
 clear.onclick = clearDisplay;
