@@ -1,9 +1,10 @@
 // Use DOM querySelector to make variables from the individual classes for each button in the HTML
 calculatorviewport = document.querySelector(".calculatorviewport");
 clear = document.querySelector(".flexbox-item-clear");
-equals = document.querySelector(".flexbox-item-equals");
+equals = document.querySelector(".equals");
 
 addition = document.querySelector(".addition");
+subtraction = document.querySelector('.subtraction');
 
 one = document.querySelector(".flexbox-item-1");
 two = document.querySelector(".flexbox-item-2");
@@ -146,7 +147,6 @@ function ZeroBtn(e) {
 }
 
 
-
 // clear display Clears the display by resetting it back to 0  note that x is a string
 function clearDisplay(e) {
 	e.preventDefault();
@@ -157,10 +157,12 @@ function clearDisplay(e) {
 	console.log('x is now ' + x);
 	console.log('y is now ' + y);
 	console.log('counterr is now ' + counterr);
-
+	//declare choice variable for input into equals button
+let choice;
 }
 function addNumbers(e) {
 	if (counterr < 1) {
+		choice = "changetoAdd";
 		e.preventDefault();
 		counterr += 1;
 		console.log('x is now ' + x);
@@ -174,12 +176,36 @@ function addNumbers(e) {
 	}
 }
 
-
-console.log(equals);
-
-const addFunct = function() {
-	return Xx + Yy;
+function subNumbers(e) {
+	if (counterr < 1) {
+		choice = "changetoSub";
+		e.preventDefault();
+		counterr += 1;
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now ' + y);
+		console.log(typeof y);
+	} else {
+		e.preventDefault();
+		console.log(typeof x);
+		console.log(typeof y);
+	}
 }
+
+equals.addEventListener('click', UltimateFunction);
+
+function UltimateFunction() {
+	console.log('change to add is ' + choice);
+	if (choice === 'changetoAdd') {
+		let outcome = x + y;
+		calculatorviewport.innerHTML = outcome;
+	} else if (choice === 'changetoSub') {
+		let outcome = x -y;
+		calculatorviewport.innerHTML = outcome;
+	}
+}
+
+
 // onclick event listeners for each div element defined above
 // each onclick listener links to a function above changing the display
 
