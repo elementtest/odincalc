@@ -21,9 +21,9 @@ zero = document.querySelector(".flexbox-item-zero");
 let x = "0";
 let y = "0";
 // Create functions for each button saving their value i.e. one = 1 and saving them as x and also displaying them in the calculator display 
+//NOTE replaced innerHTML with textcontent.  seems to be normal functionality and maybe improved
 var counterr = 0;
 function OneBtn(e) {
-	//MISTAKE MIXED UP GREATER THAN AND LESS THAN SIGNS!!!!
 	if (counterr < 1) {
 	e.preventDefault();
 	x += one.textContent;
