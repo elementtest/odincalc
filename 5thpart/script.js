@@ -28,130 +28,118 @@ function OneBtn(e) {
 	e.preventDefault();
 	x += one.textContent;
 	// POSSIBLE ERROR HERE:  x -= " deletes the leading 0 frm the display" also repeated for numbers 1 thru 5 
-	x -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += one.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log("y value is now" + y);
+		console.log("y value is now " + y);
 	};
 };
 function TwoBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += two.textContent;
-	x -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += two.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function ThreeBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += three.textContent;
-	x -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += three.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function FourBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += four.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += four.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function FiveBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += five.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += five.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function SixBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += six.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += six.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function SevenBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += seven.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += seven.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function EightBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += eight.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += eight.textContent;
-		y -= ""
+		
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function NineBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += nine.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += nine.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 function ZeroBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
 	x += zero.textContent;
-	x -= "";
+	
 	calculatorviewport.textContent = x;	
 	} else {
 		y += zero.textContent;
-		y -= "";
 		calculatorviewport.textContent = y;
-		console.log('y is now' + y);
+		console.log('y is now ' + y);
 	}
 }
 
