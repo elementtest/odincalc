@@ -170,20 +170,29 @@ function clearDisplay(e) {
 	// equals button will have ultimate function that will do the operation inside based on what the choice variable is when it is clicked on in each one
 }
 let choice;
+//whatttstring variable is used to make logic of stringing operations possible will change behaviour of operation button on the spot the equal button will still work normally
+let whatttString;
 function addNumbers(e) {
 	if (counterr < 1) {
 		choice = "changetoAdd";
 		e.preventDefault();
 		counterr += 1;
+		whatttString = "adddString";
 		console.log('x is now ' + x);
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else {
+	} else if (whatttString === "subbbString") {
+		x = x - y;
+		y = "0";
+		whatttString = "adddString";
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
-	}
+	} else if (whatttString = "adddString") {
+		x = x + y;
+		y = "0";
+	} 
 }
 
 function subNumbers(e) {
@@ -191,14 +200,21 @@ function subNumbers(e) {
 		choice = "changetoSub";
 		e.preventDefault();
 		counterr += 1;
+		whatttString = "subbbString";
 		console.log('x is now ' + x);
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else  {
+	} else if (whatttString === "adddString")  {
+		x = x + y;
+		y = "0";
+		whatttString = "subbbString";
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+	} else if (whatttString === "subbbString") {
+		x = x - y;
+		y = "0";
 	}
 }
 
@@ -207,6 +223,7 @@ function multNumbers(e) {
 		choice = "changetoMult";
 		e.preventDefault();
 		counterr += 1;
+		whatttString = "multttString";
 		console.log('x is now ' + x);
 		console.log(typeof x);
 		console.log('y is now ' + y);
@@ -223,6 +240,7 @@ function divNumbers(e) {
 		choice = "changetoDiv";
 		e.preventDefault();
 		counterr += 1;
+		whatttString = "divvvString";
 		console.log('x is now ' + x);
 		console.log(typeof x);
 		console.log('y is now ' + y);
