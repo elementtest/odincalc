@@ -183,6 +183,8 @@ function addNumbers(e) {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+		x = x + y;
+		y = "0";
 	}
 }
 
@@ -199,6 +201,8 @@ function subNumbers(e) {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+		x = x + y;
+		y = "0";
 	}
 }
 
