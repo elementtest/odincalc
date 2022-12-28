@@ -1,1 +1,1 @@
-3rd attempt of odin project calculator hoping to now link operation functions to buttons successfully
+3rd attempt of odin project calculator hoping to now link operation functions to buttons successfullysuccessfully changed innerHTML problem to textContent which is apparently more stable also minor tweaks with the CSS to make it look a little bit more rounded on the edges
