@@ -30,7 +30,7 @@ function OneBtn(e) {
 	// POSSIBLE ERROR HERE:  x -= " deletes the leading 0 frm the display" also repeated for numbers 1 thru 5 
 	x -= "";
 	calculatorviewport.textContent = x;	
-	} else  {
+	} else {
 		y += one.textContent;
 		y -= "";
 		calculatorviewport.textContent = y;
@@ -168,8 +168,8 @@ function clearDisplay(e) {
 	console.log('counterr is now ' + counterr);
 	//declare choice variable for input into equals button
 	// equals button will have ultimate function that will do the operation inside based on what the choice variable is when it is clicked on in each one
-let choice;
 }
+let choice;
 function addNumbers(e) {
 	if (counterr < 1) {
 		choice = "changetoAdd";
@@ -195,7 +195,7 @@ function subNumbers(e) {
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else {
+	} else  {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
