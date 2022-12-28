@@ -201,7 +201,7 @@ function subNumbers(e) {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
-		x = x + y;
+		x = x -y;
 		y = "0";
 	}
 }
