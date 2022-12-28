@@ -26,124 +26,131 @@ function OneBtn(e) {
 	//MISTAKE MIXED UP GREATER THAN AND LESS THAN SIGNS!!!!
 	if (counterr < 1) {
 	e.preventDefault();
-	x += one.innerHTML;
+	x += one.textContent;
 	// POSSIBLE ERROR HERE:  x -= " deletes the leading 0 frm the display" also repeated for numbers 1 thru 5 
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else  {
-		y += one.innerHTML;
+		y += one.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log("y value is now" + y);
 	};
 };
 function TwoBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += two.innerHTML;
+	x += two.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += two.innerHTML;
+		y += two.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function ThreeBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += three.innerHTML;
+	x += three.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += three.innerHTML;
+		y += three.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function FourBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += four.innerHTML;
+	x += four.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += four.innerHTML;
+		y += four.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function FiveBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += five.innerHTML;
+	x += five.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += five.innerHTML;
+		y += five.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function SixBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += six.innerHTML;
+	x += six.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += six.innerHTML;
+		y += six.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function SevenBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += seven.innerHTML;
+	x += seven.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += seven.innerHTML;
+		y += seven.textContent;
 		y -= "";
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function EightBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += eight.innerHTML;
+	x += eight.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += eight.innerHTML;
+		y += eight.textContent;
 		y -= ""
-		calculatorviewport.innerHTML = y;
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function NineBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += nine.innerHTML;
+	x += nine.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += nine.innerHTML;
+		y += nine.textContent;
 		y -= "";
-		calculatorviewport.innerHTML = y;
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
 function ZeroBtn(e) {
 	if (counterr < 1) {
 	e.preventDefault();
-	x += zero.innerHTML;
+	x += zero.textContent;
 	x -= "";
-	calculatorviewport.innerHTML = x;	
+	calculatorviewport.textContent = x;	
 	} else {
-		y += zero.innerHTML;
+		y += zero.textContent;
 		y -= "";
-		calculatorviewport.innerHTML = y;
+		calculatorviewport.textContent = y;
 		console.log('y is now' + y);
 	}
 }
@@ -152,7 +159,7 @@ function ZeroBtn(e) {
 // clear display Clears the display by resetting it back to 0  note that x is a string
 function clearDisplay(e) {
 	e.preventDefault();
-	calculatorviewport.innerHTML = "0";
+	calculatorviewport.textContent = "0";
 	x = "0";
 	y = "0";
 	counterr = 0;
@@ -233,16 +240,16 @@ function UltimateFunction() {
 	console.log('change to add is ' + choice);
 	if (choice === 'changetoAdd') {
 		let outcome = x + y;
-		calculatorviewport.innerHTML = outcome;
+		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoSub') {
 		let outcome = x -y;
-		calculatorviewport.innerHTML = outcome;
+		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoMult') {
 		let outcome = x * y;
-		calculatorviewport.innerHTML = outcome;
+		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoDiv') {
 		let outcome = x / y;
-		calculatorviewport.innerHTML = outcome;
+		calculatorviewport.textContent = outcome;
 	}
 }
 
