@@ -180,6 +180,7 @@ function clearDisplay(e) {
 	//declare choice variable for input into equals button
 	// equals button will have ultimate function that will do the operation inside based on what the choice variable is when it is clicked on in each one
 let choice;
+//logic embedded into each function and repeated.  can be improved upon by another function that handles it TODO
 }
 function addNumbers(e) {
 	if (counterr < 1) {
