@@ -184,28 +184,48 @@ let choice;
 function addNumbers(e) {
 	if (counterr < 1) {
 		choice = "changetoAdd";
+		console.log(choice);
 		e.preventDefault();
 		counterr += 1;
 		console.log('x is now ' + x);
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else {
-		if (choice === "changetoAdd") {
-			let outcomeTwo = x + y;
-			calculatorviewport.textContent = outcomeTwo;
-			y = "0";
-			x = outcomeTwo;
-			console.log('x is now ' + x);
-			console.log(typeof x);
-			console.log('y is now ' + y);
-			console.log(typeof y);
-		}
+	} else if (choice === "changetoAdd") {
+      let outcomeTwo = x + y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+	  choice = "changetoAdd";
+	  console.log(choice);
+    } else if (choice === "changetoSub") {
+      let outcomeTwo = x - y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoAdd";
+		console.log(choice);
+    } else if (choice === "changetoMult") {
+      let outcomeTwo = x * y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoAdd";
+		console.log(choice);
+    } else if (choice === "changetoDiv") {
+      letoutcomeTwo = x / y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoAdd";
+		console.log(choice);
+    } else {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+		console.log(choice);
 	}
-}
+};
 
 function subNumbers(e) {
 	if (counterr < 1) {
@@ -216,18 +236,42 @@ function subNumbers(e) {
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else {
-		if (choice === "changetoSub") {
-			let outcomeTwo = x - y;
-			calculatorviewport.textContent = outcomeTwo;
-			y = "0";
-			x = outcomeTwo;
-		}
+		console.log(choice);
+	} else if (choice === "changetoSub") {
+      let outcomeTwo = x - y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+	  choice = "changetoSub";
+		console.log(choice);
+    } else if (choice === "changetoMult") {
+      let outcomeTwo = x * y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoSub";
+		console.log(choice);
+    } else if (choice === "changetoDiv") {
+      letoutcomeTwo = x / y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoSub";
+		console.log(choice);
+    } else if (choice === "changetoAdd") {
+      let outcomeTwo = x + y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoSub";
+		console.log(choice);
+    } else {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+		console.log(choice);
 	}
-}
+};
 
 function multNumbers(e) {
 	if (counterr < 1) {
@@ -238,18 +282,42 @@ function multNumbers(e) {
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else {
-		if (choice === "changetoMult") {
-			let outcomeTwo = x * y;
-			calculatorviewport.textContent = outcomeTwo;
-			y = "0";
-			x = outcomeTwo;
-		}
+		console.log(choice);
+	} else if (choice === "changetoMult") {
+      let outcomeTwo = x * y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+	  choice = "changetoMult";
+		console.log(choice);
+    } else if (choice === "changetoSub") {
+      let outcomeTwo = x - y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoMult";
+		console.log(choice);
+    } else if (choice === "changetoDiv") {
+      let outcomeTwo = x / y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoMult";
+		console.log(choice);
+    } else if (choice === "changetoAdd") {
+      let outcomeTwo = x + y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoMult";
+		console.log(choice);
+    } else {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+		console.log(choice);
 	}
-}
+};
 
 function divNumbers(e) {
 	if (counterr < 1) {
@@ -260,16 +328,40 @@ function divNumbers(e) {
 		console.log(typeof x);
 		console.log('y is now ' + y);
 		console.log(typeof y);
-	} else {
-		if (choice === "changetoDiv") {
-			let outcomeTwo = x / y;
-			calculatorviewport.textContent = outcomeTwo;
-			y = "0";
-			x = outcomeTwo;
-		}
+		console.log(choice);
+	} else if (choice === "changetoDiv") {
+      let outcomeTwo = x / y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+	  choice = "changetoDiv"
+		console.log(choice);
+    } else if (choice === "changetoSub") {
+      let outcomeTwo = x - y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoDiv";
+		console.log(choice);
+    } else if (choice === "changetoMult") {
+      let outcomeTwo = x * y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoDiv";
+		console.log(choice);
+    } else if (choice === "changetoAdd") {
+      let outcomeTwo = x + y;
+      calculatorviewport.textContent = outcomeTwo;
+      y = "0";
+      x = outcomeTwo;
+      choice = "changetoDiv";
+		console.log(choice);
+    } else {
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
+		console.log(choice);
 	}
 }
 
