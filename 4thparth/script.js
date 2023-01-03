@@ -29,6 +29,7 @@ function OneBtn(e) {
 	x += one.textContent;
 	// POSSIBLE ERROR HERE:  x -= " deletes the leading 0 frm the display" also repeated for numbers 1 thru 5 
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else  {
 		y += one.textContent;
@@ -42,6 +43,7 @@ function TwoBtn(e) {
 	e.preventDefault();
 	x += two.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += two.textContent;
@@ -55,6 +57,7 @@ function ThreeBtn(e) {
 	e.preventDefault();
 	x += three.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += three.textContent;
@@ -68,6 +71,7 @@ function FourBtn(e) {
 	e.preventDefault();
 	x += four.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += four.textContent;
@@ -81,6 +85,7 @@ function FiveBtn(e) {
 	e.preventDefault();
 	x += five.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += five.textContent;
@@ -94,6 +99,7 @@ function SixBtn(e) {
 	e.preventDefault();
 	x += six.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += six.textContent;
@@ -107,6 +113,7 @@ function SevenBtn(e) {
 	e.preventDefault();
 	x += seven.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += seven.textContent;
@@ -133,6 +140,7 @@ function NineBtn(e) {
 	e.preventDefault();
 	x += nine.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += nine.textContent;
@@ -146,6 +154,7 @@ function ZeroBtn(e) {
 	e.preventDefault();
 	x += zero.textContent;
 	x -= "";
+	y -= "";
 	calculatorviewport.textContent = x;	
 	} else {
 		y += zero.textContent;
@@ -164,7 +173,9 @@ function clearDisplay(e) {
 	y = "0";
 	counterr = 0;
 	console.log('x is now ' + x);
+	console.log(typeof x);
 	console.log('y is now ' + y);
+	console.log(typeof y);
 	console.log('counterr is now ' + counterr);
 	//declare choice variable for input into equals button
 	// equals button will have ultimate function that will do the operation inside based on what the choice variable is when it is clicked on in each one
@@ -180,6 +191,16 @@ function addNumbers(e) {
 		console.log('y is now ' + y);
 		console.log(typeof y);
 	} else {
+		if (choice === "changetoAdd") {
+			let outcomeTwo = x + y;
+			calculatorviewport.textContent = outcomeTwo;
+			y = "0";
+			x = outcomeTwo;
+			console.log('x is now ' + x);
+			console.log(typeof x);
+			console.log('y is now ' + y);
+			console.log(typeof y);
+		}
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
@@ -238,20 +259,35 @@ equals.addEventListener('click', UltimateFunction);
 //based on choice varaiable will execute UltimateFunction and then put out the contents to the viewport
 function UltimateFunction() {
 	if (choice === 'changetoAdd') {
-		console.log('added together')
+		console.log('calculation completed')
 		console.log('x is now ' + x);
 		console.log(typeof x);
 		console.log('y is now' + y);
-		let outcome = x + y;
 		console.log(typeof y);
+		let outcome = x + y;
 		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoSub') {
+		console.log('calculation completed')
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now' + y);
+		console.log(typeof y);
 		let outcome = x -y;
 		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoMult') {
+		console.log('calculation completed')
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now' + y);
+		console.log(typeof y);
 		let outcome = x * y;
 		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoDiv') {
+		console.log('calculation completed')
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now' + y);
+		console.log(typeof y);
 		let outcome = x / y;
 		calculatorviewport.textContent = outcome;
 	}
