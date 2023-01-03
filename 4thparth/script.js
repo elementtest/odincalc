@@ -235,11 +235,15 @@ function divNumbers(e) {
 }
 
 equals.addEventListener('click', UltimateFunction);
-
+//based on choice varaiable will execute UltimateFunction and then put out the contents to the viewport
 function UltimateFunction() {
-	console.log('change to add is ' + choice);
 	if (choice === 'changetoAdd') {
+		console.log('added together')
+		console.log('x is now ' + x);
+		console.log(typeof x);
+		console.log('y is now' + y);
 		let outcome = x + y;
+		console.log(typeof y);
 		calculatorviewport.textContent = outcome;
 	} else if (choice === 'changetoSub') {
 		let outcome = x -y;

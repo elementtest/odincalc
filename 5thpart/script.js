@@ -18,8 +18,8 @@ seven = document.querySelector(".flexbox-item-7");
 eight = document.querySelector(".flexbox-item-8");
 nine = document.querySelector(".flexbox-item-9");
 zero = document.querySelector(".flexbox-item-zero");
-let x = "0";
-let y = "0";
+let x = 0;
+let y = 0;
 // Create functions for each button saving their value i.e. one = 1 and saving them as x and also displaying them in the calculator display 
 //NOTE replaced innerHTML with textcontent.  seems to be normal functionality and maybe improved
 var counterr = 0;
@@ -148,8 +148,8 @@ function ZeroBtn(e) {
 function clearDisplay(e) {
 	e.preventDefault();
 	calculatorviewport.textContent = "0";
-	x = "0";
-	y = "0";
+	x = 0;
+	y = 0;
 	counterr = 0;
 	console.log('x is now ' + x);
 	console.log('y is now ' + y);
