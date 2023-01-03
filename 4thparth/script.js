@@ -217,6 +217,12 @@ function subNumbers(e) {
 		console.log('y is now ' + y);
 		console.log(typeof y);
 	} else {
+		if (choice === "changetoSub") {
+			let outcomeTwo = x - y;
+			calculatorviewport.textContent = outcomeTwo;
+			y = "0";
+			x = outcomeTwo;
+		}
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
@@ -233,6 +239,12 @@ function multNumbers(e) {
 		console.log('y is now ' + y);
 		console.log(typeof y);
 	} else {
+		if (choice === "changetoMult") {
+			let outcomeTwo = x * y;
+			calculatorviewport.textContent = outcomeTwo;
+			y = "0";
+			x = outcomeTwo;
+		}
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
@@ -249,6 +261,12 @@ function divNumbers(e) {
 		console.log('y is now ' + y);
 		console.log(typeof y);
 	} else {
+		if (choice === "changetoDiv") {
+			let outcomeTwo = x / y;
+			calculatorviewport.textContent = outcomeTwo;
+			y = "0";
+			x = outcomeTwo;
+		}
 		e.preventDefault();
 		console.log(typeof x);
 		console.log(typeof y);
